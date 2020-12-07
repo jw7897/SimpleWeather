@@ -49,3 +49,12 @@ button:hover {
 .notClear{
   background-image: linear-gradient(grey, white);
 }
+
+.notClearBtn{
+  border: 2px solid grey;
+}
+
+.notClearBtn:hover {
+  background-color: grey;
+  color: white;
+}
