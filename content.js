@@ -51,15 +51,27 @@ const successCallback = (position) => {
       } else if (info == "Shower rain" || info == "Rain" || info == "Light Rain") {
         document.getElementById("icon").innerHTML = "<img src='icons/rain.png' alt='rain'>"
         document.getElementById("background").classList.add("notClear")
+        document.getElementById("celcius").classList.add("notClearBtn")
+        document.getElementById("fahrenheit").classList.add("notClearBtn")
+        document.getElementById("kelvin").classList.add("notClearBtn")
       } else if (info == "Thunderstorm") {
         document.getElementById("icon").innerHTML = "<img src='icons/lightning.png' alt='lightning'>"
         document.getElementById("background").classList.add("notClear")
+        document.getElementById("celcius").classList.add("notClearBtn")
+        document.getElementById("fahrenheit").classList.add("notClearBtn")
+        document.getElementById("kelvin").classList.add("notClearBtn")
       } else if (info == "Snow") {
         document.getElementById("icon").innerHTML = "<img src='icons/snow.png' alt='snow'>"
         document.getElementById("background").classList.add("notClear")
+        document.getElementById("celcius").classList.add("notClearBtn")
+        document.getElementById("fahrenheit").classList.add("notClearBtn")
+        document.getElementById("kelvin").classList.add("notClearBtn")
       } else if (info == "Mist") {
         document.getElementById("icon").innerHTML = "<img src='icons/mist.png' alt='mist'>"
         document.getElementById("background").classList.add("notClear")
+        document.getElementById("celcius").classList.add("notClearBtn")
+        document.getElementById("fahrenheit").classList.add("notClearBtn")
+        document.getElementById("kelvin").classList.add("notClearBtn")
       }
 
 
