@@ -48,7 +48,7 @@ const successCallback = (position) => {
       } else if (info == "Clear Sky") {
         document.getElementById("icon").innerHTML = "<img src='icons/sunny.png' alt='sun'>"
         document.getElementById("background").classList.add("clear")
-      } else if (info == "Shower rain" || info == "Rain") {
+      } else if (info == "Shower rain" || info == "Rain" || info == "Light Rain") {
         document.getElementById("icon").innerHTML = "<img src='icons/rain.png' alt='rain'>"
         document.getElementById("background").classList.add("notClear")
       } else if (info == "Thunderstorm") {
