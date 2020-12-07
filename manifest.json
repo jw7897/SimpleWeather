@@ -1,0 +1,17 @@
+{
+  "name": "SimpleWeather",
+  "version": "1.0",
+  "manifest_version" : 2,
+   "background": {
+       "scripts":      ["content.js"],
+       "persistent":   false
+   },
+  "browser_action":{
+    "default_popup": "popup.html",
+    "default_title": "Simple Weather"
+  },
+  "permissions": ["geolocation", "activeTab"],
+  "icons": { "16": "icons/icon16.png",
+           "48": "icons/icon48.png",
+          "128": "icons/icon128.png" }
+}
