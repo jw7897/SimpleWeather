@@ -1,5 +1,6 @@
 //Variables needed
 let info;
+let main;
 let kTemp;
 let fTemp;
 let cTemp;
@@ -21,6 +22,7 @@ const successCallback = (position) => {
     })
     .then((res) => {
       //Saves temperature and description and outputs
+      main = res.list[0].weather[0].main;
       info = res.list[0].weather[0].description;
       kTemp = res.list[0].main.temp;
       cTemp = kTemp - 273.15;
@@ -42,32 +44,44 @@ const successCallback = (position) => {
 
 
       //Sets icon
-      if (info == "Scattered Clouds" || info == "Few Clouds" || info == "Broken Clouds"|| info == "Overcast Clouds") {
+      if (main == "Clouds" || main == "Squall") {
         document.getElementById("icon").innerHTML = "<img src='icons/cloudy.png' alt='clouds'>"
         document.getElementById("background").classList.add("clear")
-      } else if (info == "Clear Sky") {
+      } else if (main == "Clear") {
         document.getElementById("icon").innerHTML = "<img src='icons/sunny.png' alt='sun'>"
         document.getElementById("background").classList.add("clear")
-      } else if (info == "Shower rain" || info == "Rain" || info == "Light Rain") {
+      } else if (main == "Rain") {
         document.getElementById("icon").innerHTML = "<img src='icons/rain.png' alt='rain'>"
         document.getElementById("background").classList.add("notClear")
         document.getElementById("celcius").classList.add("notClearBtn")
         document.getElementById("fahrenheit").classList.add("notClearBtn")
         document.getElementById("kelvin").classList.add("notClearBtn")
-      } else if (info == "Thunderstorm") {
+      } else if (main == "Thunderstorm") {
         document.getElementById("icon").innerHTML = "<img src='icons/lightning.png' alt='lightning'>"
         document.getElementById("background").classList.add("notClear")
         document.getElementById("celcius").classList.add("notClearBtn")
         document.getElementById("fahrenheit").classList.add("notClearBtn")
         document.getElementById("kelvin").classList.add("notClearBtn")
-      } else if (info == "Snow") {
+      } else if (main == "Snow") {
         document.getElementById("icon").innerHTML = "<img src='icons/snow.png' alt='snow'>"
         document.getElementById("background").classList.add("notClear")
         document.getElementById("celcius").classList.add("notClearBtn")
         document.getElementById("fahrenheit").classList.add("notClearBtn")
         document.getElementById("kelvin").classList.add("notClearBtn")
-      } else if (info == "Mist") {
+      } else if (main == "Mist" || main == "Smoke" || main == "Dust" || main == "Haze" || main == "Fog" || main == "Sand") {
         document.getElementById("icon").innerHTML = "<img src='icons/mist.png' alt='mist'>"
+        document.getElementById("background").classList.add("notClear")
+        document.getElementById("celcius").classList.add("notClearBtn")
+        document.getElementById("fahrenheit").classList.add("notClearBtn")
+        document.getElementById("kelvin").classList.add("notClearBtn")
+      } else if (main == "Tornado") {
+        document.getElementById("icon").innerHTML = "<img src='icons/tornado.png' alt='Tornado'>"
+        document.getElementById("background").classList.add("notClear")
+        document.getElementById("celcius").classList.add("notClearBtn")
+        document.getElementById("fahrenheit").classList.add("notClearBtn")
+        document.getElementById("kelvin").classList.add("notClearBtn")
+      } else {
+        document.getElementById("icon").innerHTML = "<img src='icons/volcano.png' alt='Volcano'>"
         document.getElementById("background").classList.add("notClear")
         document.getElementById("celcius").classList.add("notClearBtn")
         document.getElementById("fahrenheit").classList.add("notClearBtn")
