@@ -35,6 +35,7 @@ button {
   background-color: transparent;
   color: black;
   border: 2px solid #87CEFA;
+  outline: none;
 }
 
 button:hover {
