@@ -1,4 +1,9 @@
 # SimpleWeather
+Download directly from google extensions:
+
+https://chrome.google.com/webstore/detail/simpleweather/ebgcifaeiglmfikibjjfdpiipljbckfb?hl=en&authuser=0
+
+OR
 
 HOW TO INSTALL
 
