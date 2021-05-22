@@ -13,7 +13,7 @@ const successCallback = (position) => {
   long = position.coords.longitude;
 
   //Declares variables for weather API
-  const apiKey = "8f05d1a283612eb01ca8554f843272b5";
+  const apiKey = *REDACTED*;
   const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${apiKey}`
 
   fetch(url)
